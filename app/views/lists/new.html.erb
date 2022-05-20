@@ -1,8 +1,10 @@
-<h2> Add a new list</h2>
+<%= link_to "Go back to lists", root_path, class: "btn btn-primary my-3"%>
 
-<%= simple_form_for [ @list ] do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "Submit list", class: "btn btn-primary" %>
-<% end %>
-<br>
-<%= link_to "Or go back to lists", lists_path%>
+
+<div class="container border p-4">
+  <h3 class="my-2"> Add a new list</h3>
+  <%= simple_form_for [ @list ] do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "Submit list", class: "btn btn-primary" %>
+  <% end %>
+</div>
